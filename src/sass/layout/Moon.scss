@@ -1,0 +1,25 @@
+section {
+  width: 100vw;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.section--main {
+  background-image: url("/moon/neil-fedorowycz-469554-unsplash.jpg");
+}
+.section--about-me {
+  background-image: url("/moon/nik-macmillan-226092-unsplash.jpg");
+}
+.section--portfolio {
+  background-image: url("/moon/sebastian-unrau-47679-unsplash.jpg");
+}
+.section--contact {
+  background-image: url("/moon/michael-paredes-466598-unsplash.jpg");
+}
+.moon h1 {
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: $h1--color;
+}

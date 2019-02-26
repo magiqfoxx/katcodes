@@ -1,0 +1,53 @@
+#name-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation-name: move-background;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+
+  background: url("../img/kc-back.jpg") repeat;
+  background-size: initial;
+  z-index: 1;
+
+  cursor: pointer;
+}
+#name-page h1 {
+  font-size: 5rem;
+  align-self: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 10vw;
+  letter-spacing: 1.5vh;
+  text-transform: uppercase;
+}
+
+@supports (-webkit-background-clip: text) {
+  #name-page {
+    color: transparent;
+    background: url("../img/kc-back.jpg") repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+  }
+}
+
+@keyframes move-background {
+  0% {
+    opacity: 0;
+    background-position: 0rem 0rem;
+  }
+  20% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    background-position: -20rem -20rem;
+  }
+}
