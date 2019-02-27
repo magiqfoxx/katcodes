@@ -3,23 +3,146 @@ section {
   min-height: 100vh;
   background-position: center;
   background-size: cover;
+  background-color: #262223;
 }
 
 .section--main {
-  background-image: url("/moon/neil-fedorowycz-469554-unsplash.jpg");
+  background-image: url("/img/moon/neil-fedorowycz-469554-unsplash.jpg");
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: $h1--color;
+    font-family: "Dorsa", sans-serif;
+  }
 }
 .section--about-me {
-  background-image: url("/moon/nik-macmillan-226092-unsplash.jpg");
+  background-image: url("/img/moon/nik-macmillan-226092-unsplash.jpg");
+  color: $light--text__color;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: right;
+
+  h2 {
+    padding: 6rem 0rem 0rem 6rem;
+  }
+  p {
+    padding: 4rem;
+    min-width: 50vw;
+    width: min-content;
+    font-size: 1.2rem;
+  }
+
+  .portfolio-item {
+    width: min-content;
+    height: min-content;
+    background-color: rgba(36, 33, 34, 0.5);
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem;
+
+    figure {
+      img {
+        width: 30vw;
+        margin: 1rem;
+        filter: blur(1px) brightness(0.7);
+      }
+      img:hover {
+        filter: none;
+        transform: scale(1.1);
+        transition: 1s;
+      }
+    }
+  }
+  @media (max-width: $max-small-screen) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    p {
+      width: 80vw;
+    }
+    .portfolio-item {
+      figure {
+        img {
+          width: 60vw;
+        }
+      }
+    }
+  }
 }
 .section--portfolio {
-  background-image: url("/moon/sebastian-unrau-47679-unsplash.jpg");
+  background-image: url("/img/moon/sebastian-unrau-47679-unsplash.jpg");
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: right;
+  color: $light--text__color;
+
+  .portfolio-item {
+    width: min-content;
+    height: min-content;
+    background-color: rgba(36, 33, 34, 0.5);
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem;
+
+    figure {
+      img {
+        width: 30vw;
+        margin: 1rem;
+        filter: blur(1px) brightness(0.7);
+      }
+      img:hover {
+        filter: none;
+        transform: scale(1.1);
+        transition: 1s;
+      }
+    }
+  }
+  h2 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    margin: 3rem;
+  }
+  @media (max-width: $max-small-screen) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    .portfolio-item {
+      figure {
+        img {
+          width: 60vw;
+        }
+      }
+    }
+  }
 }
 .section--contact {
-  background-image: url("/moon/michael-paredes-466598-unsplash.jpg");
-}
-.moon h1 {
-  text-align: center;
-  font-size: 4rem;
-  text-transform: uppercase;
-  color: $h1--color;
+  background-image: url("/img/moon/michael-paredes-466598-unsplash.jpg");
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  color: $light--text__color;
+
+  h2 {
+    grid-column-start: 2;
+    align-self: center;
+  }
+  .contact--links {
+    grid-column-start: 2;
+    img {
+      height: 100px;
+      margin: 1rem;
+    }
+  }
+  @media (max-width: $max-small-screen) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr;
+    h2 {
+      grid-column-start: 1;
+    }
+    .contact--links {
+      grid-column-start: 1;
+    }
+  }
 }

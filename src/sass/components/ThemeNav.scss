@@ -1,15 +1,16 @@
 .theme-nav {
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 50%;
+  margin-top: 40vh;
   transform: translateY(-50%);
   text-transform: uppercase;
-  color: $nav--text__color;
+  color: $dark--text__color;
   ul {
     li {
       display: inline;
       list-style: none;
       margin: 1rem;
+      cursor: pointer;
     }
   }
 }

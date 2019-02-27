@@ -1,5 +1,6 @@
 @import "./base/base.scss";
 @import "./base/variables.scss";
+@import "./base/mediaQueries.scss";
 
 @import "./components/NamePage.scss";
 @import "./components/MusicPlayer.scss";
@@ -7,3 +8,4 @@
 @import "./components/ThemeNav.scss";
 
 @import "./layout/Moon.scss";
+@import "./layout/OldSchool.scss";

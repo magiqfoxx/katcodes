@@ -24,3 +24,6 @@ yarn-error.log*
 
 /other
 /src/img/moon
+/public/img/bootstrap
+/public/img/old-school
+/public/img/proff

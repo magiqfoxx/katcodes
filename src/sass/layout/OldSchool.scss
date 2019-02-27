@@ -1,0 +1,43 @@
+.old-school {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "gallery . dog"
+    ". logo ."
+    "cat . games";
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+
+  &--logo {
+    grid-area: logo;
+  }
+  &--gallery {
+    grid-area: gallery;
+    align-self: flex-end;
+    justify-self: self-end;
+  }
+  &--dog {
+    grid-area: dog;
+    align-self: flex-end;
+    justify-self: self-start;
+  }
+  &--cat {
+    grid-area: cat;
+    align-self: flex-start;
+    justify-self: self-end;
+  }
+  &--games {
+    grid-area: games;
+    align-self: flex-start;
+    justify-self: self-start;
+    margin-top: 40px;
+  }
+
+  img {
+    width: 100px;
+    max-height: 100px;
+  }
+}

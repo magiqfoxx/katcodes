@@ -1,23 +1,28 @@
 import React, { Component } from "react";
 
+import play from "../img/music-player/play.png";
+import playH from "../img/music-player/play-h.png";
+import pause from "../img/music-player/pause.png";
+import pauseH from "../img/music-player/pause-h.png";
+import stop from "../img/music-player/stop.png";
+import stopH from "../img/music-player/stop-h.png";
+
 class MusicPlayer extends Component {
   state = {};
 
-  onHover = () => {
-    console.log("this");
-    this.src = "../img/music-player/play-h.png";
+  onHover = event => {
+    console.log(event.target);
+    //`../img/music-player/${src}.png`;
+  };
+  onHoverEnd = (event, src) => {
+    event.target.src = src;
   };
   render() {
     return (
       <div className="moon music-player">
-        <img
-          src={require("../img/music-player/play.png")}
-          alt="play"
-          onMouseOver={this.onHover}
-          onClick={this.onHover}
-        />
-        <img src={require("../img/music-player/pause.png")} alt="pause" />
-        <img src={require("../img/music-player/stop.png")} alt="stop" />
+        <img src={play} alt="play" onMouseOver={this.onHover} />
+        <img src={pause} alt="pause" onMouseOver={this.onHover} />
+        <img src={stop} alt="stop" onMouseOver={this.onHover} />
       </div>
     );
   }
