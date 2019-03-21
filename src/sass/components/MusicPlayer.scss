@@ -10,7 +10,34 @@
   width: 120px;
   height: 40px;
 
-  background-color: rgba(23, 30, 46, 0.4);
+  background-color: none; //$dark--shade;
+
+  .music-player--button {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    :hover {
+      path {
+        fill: white;
+      }
+    }
+    path {
+      fill: rgba(23, 30, 46, 0.4);
+      stroke: #ffffff;
+      stroke-width: 3px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    path:hover {
+    }
+  }
 }
 .music-player img {
   height: fit-content;

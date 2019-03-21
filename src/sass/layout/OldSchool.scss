@@ -1,15 +1,22 @@
 .old-school {
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "gallery . dog"
-    ". logo ."
-    "cat . games";
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   text-align: center;
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "gallery . dog"
+      ". logo ."
+      "cat . games";
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
 
   &--logo {
     grid-area: logo;
@@ -18,26 +25,88 @@
     grid-area: gallery;
     align-self: flex-end;
     justify-self: self-end;
+
+    img:hover {
+      animation: movegallery 2s ease;
+    }
   }
+
   &--dog {
+    width: 15vw;
+    height: 10vh;
     grid-area: dog;
-    align-self: flex-end;
+    align-self: flex-start;
     justify-self: self-start;
+    margin-top: 40px;
+
+    background-image: url(/img/old-school/dog.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url(/img/old-school/dog-h.png);
+      transform: scale(1.2);
+      transition-duration: 1s;
+    }
   }
   &--cat {
     grid-area: cat;
     align-self: flex-start;
     justify-self: self-end;
+    &:hover {
+      transform: skew(-15deg);
+      transition-duration: 1s;
+    }
   }
+
   &--games {
+    width: 15vw;
+    height: 10vh;
     grid-area: games;
     align-self: flex-start;
     justify-self: self-start;
     margin-top: 40px;
+
+    background-image: url(/img/old-school/pad.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url(/img/old-school/pad3.gif);
+      transform: scale(1.2);
+      transition-duration: 1s;
+    }
   }
 
   img {
     width: 100px;
     max-height: 100px;
+  }
+}
+@keyframes movegallery {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
   }
 }

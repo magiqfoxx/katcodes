@@ -24,7 +24,7 @@ class App extends Component {
       case "?":
         return "?";
       default:
-        return <NamePage onClick={this.handleClick} />;
+        return <Moon />; //<NamePage onClick={this.handleClick} />;
     }
   };
 
