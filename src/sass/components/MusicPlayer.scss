@@ -3,12 +3,12 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  top: 1rem;
+  top: 0.6rem;
   left: 1rem;
   z-index: 1;
 
-  width: 120px;
-  height: 40px;
+  width: 6rem;
+  height: 2rem;
 
   background-color: none; //$dark--shade;
 
@@ -25,20 +25,21 @@
     height: 2rem;
     :hover {
       path {
-        fill: white;
+        fill: $dark--red__color;
       }
     }
     path {
-      fill: rgba(23, 30, 46, 0.4);
-      stroke: #ffffff;
-      stroke-width: 3px;
+      fill: none;
+      stroke: $dark--red__color;
+      stroke-width: 5px;
       stroke-linecap: round;
       stroke-linejoin: round;
-    }
-    path:hover {
     }
   }
 }
 .music-player img {
   height: fit-content;
+}
+.video {
+  display: none;
 }

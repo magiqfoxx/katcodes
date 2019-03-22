@@ -1,0 +1,31 @@
+.portfolio-item {
+  width: min-content;
+  height: min-content;
+  background-color: rgba(36, 33, 34, 0.5);
+  padding: 1rem;
+  text-align: center;
+  margin: 2rem;
+
+  figure {
+    img {
+      width: 30vw;
+      filter: blur(2px) brightness(0.4);
+    }
+    //zoom out from the image
+    img:hover {
+      filter: none;
+      transform: scale(1.1);
+      transition: 1s;
+    }
+  }
+}
+
+@media (max-width: $max-small-screen) {
+  .portfolio-item {
+    figure {
+      img {
+        width: 60vw;
+      }
+    }
+  }
+}
