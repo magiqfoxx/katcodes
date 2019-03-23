@@ -14,10 +14,17 @@ section {
   background-image: url("/img/moon/neil-fedorowycz-469554-unsplash.jpg");
   h1 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: $h1--color;
     font-family: "Dorsa", sans-serif;
+    font-family: "Italiana", serif;
+    font-family: "Fredericka the Great", cursive;
+    font-family: "Sorts Mill Goudy", serif;
+    font-family: "Lustria", serif;
+    font-family: "Marcellus", serif;
+    font-family: "Forum", cursive;
+    font-family: "Tenor Sans", sans-serif;
   }
 }
 .section--about-me {
@@ -47,12 +54,40 @@ section {
     grid-template-columns: 1fr;
     justify-items: center;
   }
+  .portfolio-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4a525073;
+    &--arrow__back,
+    &--arrow__forward {
+      align-self: center;
+      svg {
+        width: 2rem;
+        path:hover {
+          fill: $dark--red__color;
+        }
+      }
+    }
+    &--arrow__back {
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+    &--arrow__forward {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
 }
 .section--portfolio {
   background-image: url("/img/moon/sebastian-unrau-47679-unsplash.jpg");
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   color: $light--text__color;
 
@@ -109,9 +144,11 @@ section {
     align-self: center;
   }
   .contact--links {
+    display: flex;
+    flex-direction: column;
     grid-column-start: 2;
     img {
-      height: 100px;
+      height: 7rem;
       margin: 1rem;
     }
   }

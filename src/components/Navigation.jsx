@@ -6,11 +6,12 @@ const Navigation = () => {
       <div className="moon navigation">
         <ul>
           <li>
-            <a href="#section--about-me">About me</a>
+            <a href="#section--about-me">Portfolio</a>
           </li>
           <li>
-            <a href="#section--portfolio">Portfolio</a>
+            <a href="#section--portfolio">About me</a>
           </li>
+
           <li>
             <a href="#section--portfolio">Contact</a>
           </li>

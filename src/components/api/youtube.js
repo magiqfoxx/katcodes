@@ -1,7 +1,6 @@
 let video;
 let player;
 
-console.log("youtube no");
 video = new Promise((resolve, reject) => {
   // 2. This code loads the IFrame Player API code asynchronously.
   const tag = document.createElement("script");
@@ -11,7 +10,6 @@ video = new Promise((resolve, reject) => {
   window.onYouTubeIframeAPIReady = () => resolve(window.YT);
 });
 video.then(YT => {
-  console.log("youtube yes");
   // 3. This function creates an <iframe> (and YouTube player)
   //    after the API code downloads.
   player = new YT.Player("player", {
