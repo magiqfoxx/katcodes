@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import NamePage from "./NamePage";
+import Sketch from "./Sketch";
+
 import Moon from "./Moon";
 import OldSchool from "./OldSchool";
 
@@ -24,7 +27,7 @@ class App extends Component {
       case "?":
         return "?";
       default:
-        return <Moon />; //<NamePage onClick={this.handleClick} />;
+        return <Sketch />; //<NamePage onClick={this.handleClick} />;
     }
   };
 

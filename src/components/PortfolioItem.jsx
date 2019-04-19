@@ -2,7 +2,12 @@ import React from "react";
 
 const PortfolioItem = props => {
   return (
-    <div className="portfolio-item">
+    <div
+      className="portfolio-item"
+      onClick={() =>
+        window.open("https://magiqfoxx.github.io/the-walk/", "_blank")
+      }
+    >
       <figure>
         <img src={props.src} alt={props.name} />
       </figure>

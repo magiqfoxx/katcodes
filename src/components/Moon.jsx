@@ -58,7 +58,7 @@ class Moon extends Component {
       src: "../img/html/citybreak.png",
       description: "Get some info about the place you wnat to go to",
       spec: "react with different apis"
-    }
+    } //hydroponics with gatsby?
   ];
   render() {
     return (
