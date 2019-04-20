@@ -7,7 +7,7 @@ import SketchAbout from "./SketchAbout";
 const SketchNav = () => {
   return (
     <Router>
-      <nav id="nav__sketch">
+      <nav id="sketch--nav">
         <ul>
           <li>
             <Link to="/sketch/">

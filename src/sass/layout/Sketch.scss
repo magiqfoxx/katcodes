@@ -1,92 +1,161 @@
-#section--main__sketch {
+#sketch--nav {
+  position: relative;
+  z-index: 11;
   background-color: white;
-}
-#sketch--background {
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding: 1rem;
+  float: right;
   width: 100%;
-  height: 100%;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      display: inline;
+      list-style: none;
+      margin: 1rem;
+    }
+  }
   img {
+    max-width: 50px;
+    cursor: pointer;
+  }
+}
+
+#sketch--main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 255, 255, 0.6);
+  display: flex;
+  padding: 2rem;
+  &--background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-}
-#nav__sketch {
-  z-index: 1;
-  position: relative;
-  background-color: white;
-  ul {
-    display: flex;
-    justify-content: flex-end;
-
-    li {
-      display: inline;
-      list-style: none;
-      width: 10vw;
+    z-index: -1;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
     }
   }
-
-  img {
-    max-width: 100%;
-    cursor: pointer;
-  }
-}
-#sketch--main {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.6);
-  display: flex;
-  position: relative;
-  z-index: 1;
-  padding: 2rem;
   &--motto {
     width: 50%;
     img {
-      width: 30vw;
-      display: block;
+      max-width: 400px;
     }
+  }
+  &--projects {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
-#sketch--projects {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#sketch--projects-blueprint {
+  position: relative;
+  width: 12rem;
+  height: 18rem;
   #sketch--current-project {
-    position: relative;
-    z-index: 1;
-    width: 25vw;
-    height: 50vh;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
     background-color: rgba(255, 255, 255, 1);
   }
-  #previous-project-1 {
-    position: absolute;
-    top: 7%;
-    left: -7%;
-    width: 86%;
-    height: 86%;
-    background-color: rgba(255, 255, 255, 0.4);
+}
+#previous-project-0 {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: -1rem;
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#previous-project-1 {
+  width: 64%;
+  height: 64%;
+  position: absolute;
+  top: 20%;
+  left: -2rem;
+  z-index: 8;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#previous-project-2 {
+  width: 51%;
+  height: 51%;
+  position: absolute;
+  top: 30%;
+  left: -3rem;
+  z-index: 7;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.disappear {
+  animation-name: disappear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
   }
-  #sketch--projects--nav {
-    display: flex;
-    justify-content: space-between;
-    height: 5vh;
-    width: 25vw;
-    img {
-      width: 5vw;
-      cursor: pointer;
-    }
-    #arrow-back {
-      transform: rotate(180deg);
-    }
-    #arrow-forward {
-      transform: rotate(180deg);
-    }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2) translateX(100px);
+    opacity: 0;
+  }
+}
+.appear {
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes appear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.25) translate(18%) translateY(0rem);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.25) translate(18%) translateY(0rem);
+    opacity: 2;
+    background-color: white;
+  }
+}
+/*prev-proj-0
+transform: scale(1.25) translate(17%) translateY(3%);
+previous-proj-1:
+scale(1.33) translate(21%) translateY(4%)
+previous-proj-2
+scale(1.5) translate(29%) translateY(5%)*/
+#sketch--projects--nav {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  width: 25vw;
+  img {
+    width: 5vw;
+    cursor: pointer;
+  }
+  #arrow-back {
+    transform: rotate(180deg);
+  }
+  #arrow-forward {
+    transform: rotate(180deg);
   }
 }
