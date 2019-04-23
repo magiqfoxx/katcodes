@@ -1,30 +1,52 @@
 import React, { useState } from "react";
-import { timeout } from "q";
-import { setTimeout } from "timers";
 
 const SketchProjects = () => {
   const projects = ["avclub", "citybreak", "doggopedia", "games", "walk"];
-  const [project, changeProject] = useState(3);
+  const [project, changeProject] = useState(0);
 
   const handleChangeProject = proj => {
-    if (proj === "previous") {
+    if (proj === "next" && project < 4) {
+      document
+        .getElementById("sketch--next-project")
+        .classList.add("next-appear");
+      setTimeout(() => {
+        document
+          .getElementById("sketch--current-project")
+          .classList.add("next-disappear");
+        Array.from(
+          document.getElementsByClassName("sketch--previous-projects")
+        ).forEach(el => el.classList.add("next-disappear"));
+      }, 1000);
+      setTimeout(() => {
+        document
+          .getElementById("sketch--next-project")
+          .classList.remove("next-appear");
+        document
+          .getElementById("sketch--current-project")
+          .classList.remove("next-disappear");
+        Array.from(
+          document.getElementsByClassName("sketch--previous-projects")
+        ).forEach(el => el.classList.remove("next-disappear"));
+        changeProject(project + 1);
+      }, 2000);
       return;
-    } else if (proj === "next") {
+    } else if (proj === "previous" && project > 0) {
       document
         .getElementById("sketch--current-project")
-        .classList.add("disappear");
+        .classList.add("previous-disappear");
       setTimeout(() => {
         Array.from(
           document.getElementsByClassName("sketch--previous-projects")
-        ).forEach(el => el.classList.add("appear"));
+        ).forEach(el => el.classList.add("previous-appear"));
       }, 1000);
       setTimeout(() => {
         document
           .getElementById("sketch--current-project")
-          .classList.remove("disappear");
+          .classList.remove("previous-disappear");
         Array.from(
           document.getElementsByClassName("sketch--previous-projects")
-        ).forEach(el => el.classList.remove("appear"));
+        ).forEach(el => el.classList.remove("previous-appear"));
+        changeProject(project - 1);
       }, 2000);
       return;
     }
@@ -45,6 +67,7 @@ const SketchProjects = () => {
     <main id="sketch--main--projects">
       <div id="sketch--projects-blueprint">
         <div id="sketch--current-project" />
+        <div id="sketch--next-project" />
         {renderPrevProjects()}
       </div>
       <div id="sketch--projects--nav">

@@ -7,13 +7,11 @@ import SketchAbout from "./SketchAbout";
 
 const Sketch = () => {
   return (
-    <React.Fragment>
+    <Router>
       <SketchNav />
-      <Router>
-        <Route exact path="/sketch/" component={SketchMain} />
-        <Route path="/sketch/about" component={SketchAbout} />
-      </Router>
-    </React.Fragment>
+      <Route exact path="/sketch/" component={SketchMain} />
+      <Route path="/sketch/about" component={SketchAbout} />
+    </Router>
   );
 };
 

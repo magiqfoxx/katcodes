@@ -1,17 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
 #sketch--nav {
   position: relative;
   z-index: 11;
   background-color: white;
-  padding: 1rem;
+  background-color: transparent;
   float: right;
   width: 100%;
+  border-bottom: 2px solid black;
   ul {
     display: flex;
     justify-content: flex-end;
     li {
       display: inline;
       list-style: none;
-      margin: 1rem;
+      margin: 0rem 1rem;
     }
   }
   img {
@@ -22,9 +31,12 @@
 
 #sketch--main {
   width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 255, 255, 0.6);
+  min-height: calc(100vh - 50px);
+  background-color: cadetblue;
+  background-color: #5f88a0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
   &--background {
     position: absolute;
@@ -41,12 +53,20 @@
       height: 100%;
       -webkit-clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
       clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
+      display: none;
     }
+  }
+  h2 {
+    font-size: 5rem;
+    width: min-content;
   }
   &--motto {
     width: 50%;
+    height: min-content;
+    display: flex;
     img {
-      max-width: 400px;
+      max-height: 150px;
+      align-self: center;
     }
   }
   &--projects {
@@ -61,7 +81,8 @@
   position: relative;
   width: 12rem;
   height: 18rem;
-  #sketch--current-project {
+  #sketch--current-project,
+  #sketch--next-project {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -70,13 +91,16 @@
     z-index: 10;
     background-color: rgba(255, 255, 255, 1);
   }
+  #sketch--next-project {
+    visibility: hidden;
+  }
 }
 #previous-project-0 {
   width: 80%;
   height: 80%;
   position: absolute;
   top: 10%;
-  left: -1rem;
+  left: -5%;
   z-index: 9;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -84,26 +108,44 @@
   width: 64%;
   height: 64%;
   position: absolute;
-  top: 20%;
-  left: -2rem;
+  top: 18%;
+  left: -9%;
   z-index: 8;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.64);
 }
 #previous-project-2 {
-  width: 51%;
-  height: 51%;
+  width: 51.2%;
+  height: 51.2%;
   position: absolute;
-  top: 30%;
-  left: -3rem;
+  top: 24.5%;
+  left: -12.3%;
   z-index: 7;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.51);
 }
-.disappear {
-  animation-name: disappear;
+#previous-project-3 {
+  width: 41%;
+  height: 41%;
+  position: absolute;
+  top: 29.5%;
+  left: -15%;
+  z-index: 6;
+  background-color: rgba(255, 255, 255, 0.41);
+}
+#previous-project-4 {
+  width: 32, 8%;
+  height: 32, 8%;
+  position: absolute;
+  top: 33, 5%;
+  left: -16, 8%;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.33);
+}
+.previous-disappear {
+  animation-name: previous-disappear;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-@keyframes disappear {
+@keyframes previous-disappear {
   0% {
     transform: scale(1);
     opacity: 1;
@@ -117,24 +159,60 @@
     opacity: 0;
   }
 }
-.appear {
-  animation-name: appear;
+.previous-appear {
+  animation-name: previous-appear;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-@keyframes appear {
+
+@keyframes previous-appear {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.25) translateX(15%) translateY(0%);
+  }
+  100% {
+    transform: scale(1.25) translateX(15%) translateY(0%);
+    opacity: 1.25;
+  }
+}
+.next-disappear {
+  animation-name: next-disappear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes next-disappear {
   0% {
     transform: scale(1);
     opacity: 1;
   }
   50% {
-    transform: scale(1.25) translate(18%) translateY(0rem);
-    opacity: 1;
+    transform: scale(0.8) translateX(-19%) translateY(0%);
   }
   100% {
-    transform: scale(1.25) translate(18%) translateY(0rem);
-    opacity: 2;
-    background-color: white;
+    transform: scale(0.8) translateX(-19%) translateY(0%);
+    opacity: 0.8;
+  }
+}
+.next-appear {
+  visibility: visible !important;
+  animation-name: next-appear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes next-appear {
+  0% {
+    transform: scale(1.2) translateX(300px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1) translate(0px);
+    opacity: 1;
   }
 }
 /*prev-proj-0
@@ -148,6 +226,7 @@ scale(1.5) translate(29%) translateY(5%)*/
   justify-content: space-between;
   height: 5vh;
   width: 25vw;
+  margin: 1rem;
   img {
     width: 5vw;
     cursor: pointer;
