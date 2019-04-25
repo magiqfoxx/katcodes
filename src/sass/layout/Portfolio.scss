@@ -1,0 +1,35 @@
+#portfolio {
+  background-color: white;
+  h1 {
+  }
+  h2 {
+  }
+  h3 {
+  }
+
+  #portfolio--title {
+    background-image: url("../img/portfolio/marian-castellazzi-777544-unsplash.jpg");
+    text-align: center;
+    min-height: 100vh;
+  }
+  #portfolio--nav {
+    background-color: white;
+    text-align: right;
+  }
+  #portfolio--about-us {
+    display: flex;
+    justify-content: center;
+    min-height: 10rem;
+    div {
+      margin: 1rem;
+    }
+  }
+  #portfolio--find-your-way {
+    display: flex;
+    img {
+      max-width: 80vw;
+      min-width: 500px;
+      object-fit: contain;
+    }
+  }
+}

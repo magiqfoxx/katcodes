@@ -3,15 +3,16 @@ html {
 }
 
 section {
-  width: 100vw;
-  min-height: 100vh;
+  min-width: 100vw;
+
   background-position: center;
   background-size: cover;
-  background-color: #262223;
 }
 
 .section--main {
   background-image: url("/img/moon/neil-fedorowycz-469554-unsplash.jpg");
+  background-color: #262223;
+  min-height: 100vh;
   h1 {
     text-align: center;
     font-size: 3rem;

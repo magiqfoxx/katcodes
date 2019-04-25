@@ -7,6 +7,8 @@ import Sketch from "./Sketch";
 import Moon from "./Moon";
 import OldSchool from "./OldSchool";
 
+import Portfolio from "./Main/Portfolio";
+
 class App extends Component {
   state = { theme: null };
 
@@ -27,7 +29,7 @@ class App extends Component {
       case "?":
         return "?";
       default:
-        return <Sketch />; //<NamePage onClick={this.handleClick} />;
+        return <Portfolio />; //<NamePage onClick={this.handleClick} />;
     }
   };
 

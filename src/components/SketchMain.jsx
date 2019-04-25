@@ -16,6 +16,7 @@ const SketchMain = () => {
         </div>
         <SketchProjects />
       </section>
+      <footer>Copyright by Kat</footer>
     </React.Fragment>
   );
 };
