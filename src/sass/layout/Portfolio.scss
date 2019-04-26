@@ -1,35 +1,142 @@
+$primary-color: #393e46;
+$secondary-color: #d65a31;
+$dark-gray: #393e46;
+$light-gray: #eeeeee;
+
 #portfolio {
   background-color: white;
   h1 {
+    font-size: 3rem;
+    color: $dark-gray;
   }
   h2 {
+    font-size: 1rem;
+    color: $primary-color;
   }
   h3 {
+    color: $secondary-color;
   }
-
-  #portfolio--title {
-    background-image: url("../img/portfolio/marian-castellazzi-777544-unsplash.jpg");
-    text-align: center;
-    min-height: 100vh;
+  section {
+    padding: 2rem;
   }
-  #portfolio--nav {
+  #nav {
     background-color: white;
     text-align: right;
+    height: 2rem;
+    color: $secondary-color;
+    padding: 0.3rem 1rem;
   }
-  #portfolio--about-us {
+  #title {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url("../img/portfolio/marian-castellazzi-777544-unsplash.jpg");
+    text-align: center;
+    min-height: calc(100vh - 2rem);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    min-height: 10rem;
-    div {
-      margin: 1rem;
+    .title--button {
+      width: 6rem;
+      height: 2rem;
+      border-radius: 0px;
+      margin: 0 1rem;
+    }
+    .title--button__primary {
+      background-color: white;
+      border: none;
+    }
+    .title--button__secondary {
+      background-color: transparent;
+      border: 1px solid $primary-color;
+      &:hover {
+        background-color: white;
+      }
     }
   }
-  #portfolio--find-your-way {
+
+  #about-us {
     display: flex;
-    img {
-      max-width: 80vw;
-      min-width: 500px;
+    justify-content: center;
+    justify-content: space-evenly;
+    min-height: 10rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    .about-us--img {
+      min-width: 80px;
+      max-width: 30vw;
       object-fit: contain;
+    }
+    p {
+      margin: 0.5rem;
+      border-bottom: 1px solid $secondary-color;
+      color: $secondary-color;
+    }
+  }
+  #find-your-way {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $light-gray;
+
+    .find-your-way--left {
+      min-width: 300px;
+      max-width: 80vw;
+      margin: 1rem;
+      text-align: center;
+    }
+    .find-your-way--img {
+      max-width: 80vw;
+      min-width: 300px;
+      width: 500px;
+      object-fit: contain;
+    }
+  }
+  #quote {
+    min-height: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .quote--text {
+      min-width: 300px;
+      max-width: 80vw;
+    }
+  }
+  #break {
+    height: 5rem;
+    background-image: url("../img/portfolio/elena-saharova-236504-unsplash.jpg");
+    background-position: top;
+  }
+  #our-team {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $light-gray;
+    .our-team--left {
+      width: 40vw;
+      min-width: 300px;
+      max-width: 80vw;
+      margin: 1rem;
+    }
+    .our-team--img {
+      max-width: 80vw;
+      min-width: 300px;
+      width: 500px;
+      object-fit: contain;
+    }
+    .our-team--arrow {
+      font-size: 4rem;
+      position: absolute;
+      top: calc(50% - 2rem);
+      right: 1rem;
+      color: $primary-color;
+      cursor: pointer;
     }
   }
 }

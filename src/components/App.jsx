@@ -8,6 +8,7 @@ import Moon from "./Moon";
 import OldSchool from "./OldSchool";
 
 import Portfolio from "./Main/Portfolio";
+import Humblebrag from "./Humblebrag/Main";
 
 class App extends Component {
   state = { theme: null };
@@ -29,7 +30,7 @@ class App extends Component {
       case "?":
         return "?";
       default:
-        return <Portfolio />; //<NamePage onClick={this.handleClick} />;
+        return <Humblebrag />; //<NamePage onClick={this.handleClick} />;
     }
   };
 

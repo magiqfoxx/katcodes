@@ -1,0 +1,144 @@
+#humblebrag {
+  $primary-color: #048998;
+  $secondary-color: #3bb4c1;
+  $dark-gray: #e9e4e6;
+  $light-gray: rgb(244, 242, 242);
+
+  background-color: white;
+  h1 {
+    font-size: 3rem;
+    color: white;
+  }
+  h2 {
+    font-size: 1.5rem;
+    color: $primary-color;
+  }
+  h3 {
+    color: $secondary-color;
+    text-align: center;
+  }
+  section {
+    padding: 2rem;
+  }
+  .button__primary {
+    background-color: $secondary-color;
+    color: white;
+  }
+  .humblebrag--button {
+    border: none;
+    border-radius: 0;
+    width: 5rem;
+    height: 1.5rem;
+    margin: 0 1rem;
+  }
+  #humblebrag--nav {
+    height: 2rem;
+    padding: 0.3rem 1rem;
+    text-align: right;
+    color: $primary-color;
+  }
+  #humblebrag--title {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url("../img/humblebrag/samson-creative-91091-unsplash.jpg");
+
+    .button__secondary {
+      background-color: transparent;
+      border: 2px solid $secondary-color;
+      color: black;
+      &:hover {
+        background-color: $secondary-color;
+        color: white;
+      }
+    }
+  }
+  #humblebrag--slates {
+    background-color: $light-gray;
+    .slates--wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .humblebrag--slate {
+        background-color: rgba($dark-gray, 0.5);
+        width: min-content;
+        margin: 1rem 2rem;
+        padding: 2rem 1rem;
+        min-width: 300px;
+        text-align: center;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+        .slate--img {
+          max-width: 80px;
+        }
+        .slate--title {
+          color: $primary-color;
+          font-weight: 900;
+        }
+        .slate--text {
+          color: #707070;
+        }
+        .slate--button {
+          width: 90%;
+          height: 19%;
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+          margin: 1rem 0rem;
+        }
+      }
+    }
+  }
+  #humblebrag--break {
+    background-image: url("../img/humblebrag/grillot-edouard-758840-unsplash.jpg");
+    height: 8rem;
+    z-index: -1;
+    .break--quote {
+      position: relative;
+      top: -3rem;
+      height: 10rem;
+      z-index: 1;
+      background-color: $primary-color;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+  #humblebrag--team {
+    background-color: $light-gray;
+    .team--wrapper {
+      background-color: $secondary-color;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .team--slate {
+        background-color: rgba($dark-gray, 0.9);
+        margin: 1rem;
+        padding: 1rem;
+        border-top: 4px solid white;
+        border-right: 4px solid $primary-color;
+        text-align: right;
+        min-height: 10rem;
+        min-width: 300px;
+        max-width: 80vw;
+        width: 15rem;
+        .team--slate--img {
+          width: 100%;
+          height: 20%;
+          object-fit: cover;
+        }
+        .team--slate--name {
+          color: $primary-color;
+          font-weight: 900;
+          font-size: 1.2rem;
+        }
+        .team--slate--text {
+          color: #707070;
+          font-size: 0.8rem;
+        }
+      }
+      .team--slate__main {
+        background-color: $dark-gray;
+      }
+    }
+  }
+}
