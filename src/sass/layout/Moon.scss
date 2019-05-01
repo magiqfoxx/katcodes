@@ -1,155 +1,157 @@
-.section--main {
-  background-image: url("/img/moon/neil-fedorowycz-469554-unsplash.jpg");
-  background-color: #262223;
-  min-height: 100vh;
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: $h1--color;
-    font-family: "Dorsa", sans-serif;
-    font-family: "Italiana", serif;
-    font-family: "Fredericka the Great", cursive;
-    font-family: "Sorts Mill Goudy", serif;
-    font-family: "Lustria", serif;
-    font-family: "Marcellus", serif;
-    font-family: "Forum", cursive;
-    font-family: "Tenor Sans", sans-serif;
-  }
-}
-.section--about-me {
-  background-image: url("/img/moon/nik-macmillan-226092-unsplash.jpg");
-  color: $light--text__color;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  .about-me--text {
-    display: flex;
-    flex-direction: column;
-    h2 {
-      //padding: 6rem 0rem 0rem 6rem;
-      margin: 1rem;
-    }
-    p {
-      min-width: 15rem;
-      max-width: 70vw;
-      width: min-content;
-      font-size: 1.2rem;
+#moon {
+  #section--main {
+    background-image: url("/img/moon/neil-fedorowycz-469554-unsplash.jpg");
+    background-color: #262223;
+    min-height: 100vh;
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: $h1--color;
+      font-family: "Dorsa", sans-serif;
+      font-family: "Italiana", serif;
+      font-family: "Fredericka the Great", cursive;
+      font-family: "Sorts Mill Goudy", serif;
+      font-family: "Lustria", serif;
+      font-family: "Marcellus", serif;
+      font-family: "Forum", cursive;
+      font-family: "Tenor Sans", sans-serif;
     }
   }
+  #section--about-me {
+    background-image: url("/img/moon/nik-macmillan-226092-unsplash.jpg");
+    color: $light--text__color;
 
-  @media (max-width: $max-small-screen) {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
-  }
-  .portfolio-carousel {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: #4a525073;
-    &--arrow__back,
-    &--arrow__forward {
-      align-self: center;
-      svg {
-        width: 2rem;
-        path:hover {
-          fill: $dark--red__color;
+    .about-me--text {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        //padding: 6rem 0rem 0rem 6rem;
+        margin: 1rem;
+      }
+      p {
+        min-width: 15rem;
+        max-width: 70vw;
+        width: min-content;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: $max-small-screen) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+    .portfolio-carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: #4a525073;
+      &--arrow__back,
+      &--arrow__forward {
+        align-self: center;
+        svg {
+          width: 2rem;
+          path:hover {
+            fill: $dark--red__color;
+          }
+        }
+      }
+      &--arrow__back {
+        svg {
+          transform: rotate(-90deg);
+        }
+      }
+      &--arrow__forward {
+        svg {
+          transform: rotate(90deg);
         }
       }
     }
-    &--arrow__back {
-      svg {
-        transform: rotate(-90deg);
-      }
-    }
-    &--arrow__forward {
-      svg {
-        transform: rotate(90deg);
-      }
-    }
   }
-}
-.section--portfolio {
-  background-image: url("/img/moon/sebastian-unrau-47679-unsplash.jpg");
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: $light--text__color;
-
-  .portfolio-item:nth-child(1) {
-    order: 0;
-  }
-  .portfolio-item:nth-child(2) {
-    order: 2;
-  }
-  .portfolio-things {
-    margin: 1rem;
-    &:nth-child(3) {
-      order: 1;
-    }
-    &:nth-child(4) {
-      order: 3;
-    }
-    h2 {
-      text-align: center;
-      margin: 1rem;
-    }
-    &--items {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      img {
-        min-height: 70px;
-        max-height: 10vw;
-        margin: 0.5rem;
-      }
-    }
-  }
-
-  h2 {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    margin: 3rem;
-  }
-  @media (max-width: $max-small-screen) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-}
-.section--contact {
-  background-image: url("/img/moon/michael-paredes-466598-unsplash.jpg");
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 3fr;
-  color: $light--text__color;
-
-  h2 {
-    grid-column-start: 2;
-    align-self: center;
-  }
-  .contact--links {
+  #section--portfolio {
+    background-image: url("/img/moon/sebastian-unrau-47679-unsplash.jpg");
     display: flex;
     flex-direction: column;
-    grid-column-start: 2;
-    img {
-      height: 7rem;
+    justify-content: center;
+    align-items: center;
+    color: $light--text__color;
+
+    .portfolio-item:nth-child(1) {
+      order: 0;
+    }
+    .portfolio-item:nth-child(2) {
+      order: 2;
+    }
+    .portfolio-things {
       margin: 1rem;
+      &:nth-child(3) {
+        order: 1;
+      }
+      &:nth-child(4) {
+        order: 3;
+      }
+      h2 {
+        text-align: center;
+        margin: 1rem;
+      }
+      &--items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        img {
+          min-height: 70px;
+          max-height: 10vw;
+          margin: 0.5rem;
+        }
+      }
+    }
+
+    h2 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      margin: 3rem;
+    }
+    @media (max-width: $max-small-screen) {
+      grid-template-columns: 1fr;
+      justify-items: center;
     }
   }
-  @media (max-width: $max-small-screen) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr;
+  #section--contact {
+    background-image: url("/img/moon/michael-paredes-466598-unsplash.jpg");
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    color: $light--text__color;
+
     h2 {
-      grid-column-start: 1;
+      grid-column-start: 2;
+      align-self: center;
     }
     .contact--links {
-      grid-column-start: 1;
+      display: flex;
+      flex-direction: column;
+      grid-column-start: 2;
+      img {
+        height: 7rem;
+        margin: 1rem;
+      }
+    }
+    @media (max-width: $max-small-screen) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr;
+      h2 {
+        grid-column-start: 1;
+      }
+      .contact--links {
+        grid-column-start: 1;
+      }
     }
   }
 }

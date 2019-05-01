@@ -5,8 +5,15 @@ const NamePage = props => {
     props.onClick();
   }
   return (
-    <div id="name-page" onClick={handleClick}>
-      <h1> Kat codes!</h1>
+    <div id="name-page" onClick="window.location.href = '#section--main'">
+      <h1 className="title"> Kat codes!</h1>
+      <button
+        className="title--button"
+        onClick="window.location.href = '#section--main'"
+      >
+        {" "}
+        >{" "}
+      </button>
     </div>
   );
 };

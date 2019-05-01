@@ -1,32 +1,42 @@
 #name-page {
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: white;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   animation-name: move-background;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 
-  background: url("../img/kc-back.jpg") repeat;
-  background-size: initial;
+  background: url("../img/kc-back.jpg");
+  background-size: cover;
   z-index: 1;
 
   cursor: pointer;
-}
-#name-page h1 {
-  font-size: 5rem;
-  align-self: center;
 
-  font-family: "Montserrat", sans-serif;
+  .title {
+    font-size: 5rem;
+    align-self: center;
 
-  font-size: 10vw;
-  letter-spacing: 1.5vh;
-  text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10vw;
+    letter-spacing: 1.5vh;
+    text-transform: uppercase;
+
+    &--button {
+      font-size: 2rem;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 2rem;
+      width: 3rem;
+      height: 2rem;
+      background-color: transparent;
+      border: none;
+    }
+  }
 }
 
 @supports (-webkit-background-clip: text) {
@@ -34,6 +44,7 @@
     color: transparent;
     background: url("../img/kc-back.jpg") repeat;
     background-size: cover;
+    background-clip: text;
     -webkit-background-clip: text;
   }
 }
@@ -49,6 +60,6 @@
   100% {
     transform: scale(1);
     opacity: 1;
-    background-position: -20rem -20rem;
+    background-position: -15rem -15rem;
   }
 }
