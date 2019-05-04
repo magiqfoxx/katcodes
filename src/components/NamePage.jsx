@@ -1,19 +1,13 @@
 import React from "react";
 
-const NamePage = props => {
-  function handleClick() {
-    props.onClick();
-  }
+const NamePage = () => {
   return (
-    <div id="name-page" onClick="window.location.href = '#section--main'">
+    <div
+      id="name-page"
+      onClick={() => (window.location.href = "#section--main")}
+    >
       <h1 className="title"> Kat codes!</h1>
-      <button
-        className="title--button"
-        onClick="window.location.href = '#section--main'"
-      >
-        {" "}
-        >{" "}
-      </button>
+      <button className="arrow">&#8595;</button>
     </div>
   );
 };

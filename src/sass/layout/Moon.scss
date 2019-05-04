@@ -1,27 +1,43 @@
 #moon {
+  section {
+    min-height: 100vh;
+  }
+  .change-theme {
+    position: absolute;
+    top: calc(50% - 4rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 1rem;
+    width: 5rem;
+    height: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.2rem;
+    border: 2px solid #734949;
+    cursor: pointer;
+    &:hover {
+      background-color: #734949;
+    }
+  }
   #section--main {
     background-image: url("/img/moon/neil-fedorowycz-469554-unsplash.jpg");
     background-color: #262223;
     min-height: 100vh;
     h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
       font-size: 3rem;
       text-transform: uppercase;
       color: $h1--color;
-      font-family: "Dorsa", sans-serif;
-      font-family: "Italiana", serif;
       font-family: "Fredericka the Great", cursive;
-      font-family: "Sorts Mill Goudy", serif;
-      font-family: "Lustria", serif;
-      font-family: "Marcellus", serif;
-      font-family: "Forum", cursive;
-      font-family: "Tenor Sans", sans-serif;
     }
   }
   #section--about-me {
     background-image: url("/img/moon/nik-macmillan-226092-unsplash.jpg");
     color: $light--text__color;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -74,7 +90,7 @@
       }
     }
   }
-  #section--portfolio {
+  #section--tech {
     background-image: url("/img/moon/sebastian-unrau-47679-unsplash.jpg");
     display: flex;
     flex-direction: column;
@@ -82,13 +98,13 @@
     align-items: center;
     color: $light--text__color;
 
-    .portfolio-item:nth-child(1) {
+    .tech:nth-child(1) {
       order: 0;
     }
-    .portfolio-item:nth-child(2) {
+    .tech:nth-child(2) {
       order: 2;
     }
-    .portfolio-things {
+    .tech {
       margin: 1rem;
       &:nth-child(3) {
         order: 1;

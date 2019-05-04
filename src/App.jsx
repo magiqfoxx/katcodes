@@ -1,31 +1,20 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import NamePage from "./components/NamePage";
 import Moon from "./components/Moon";
 import A11y from "./components/A11y";
 
 class App extends Component {
-  state = { theme: null };
+  state = { theme: "moon" };
 
-  handleClick = () => {
-    this.setState({ theme: "moon" });
-  };
-  changeTheme = newTheme => {
-    console.log(newTheme);
-    this.setState({ theme: newTheme });
-  };
-
+  themeChange(theme) {
+    this.setState({ theme });
+  }
   renderContent = () => {
     switch (this.state.theme) {
       case "moon":
-        return <Moon handleThemeChange={this.changeTheme} />;
-      case "a11y":
-        return <A11y handleThemeChange={this.changeTheme} />;
-      case "?":
-        return "?";
+        return <Moon themeChange={() => this.themeChange("a11y")} />;
       default:
-        return <Moon />; //<NamePage onClick={this.handleClick} />;
+        return <A11y themeChange={() => this.themeChange("moon")} />; //<NamePage onClick={this.handleClick} />;
     }
   };
 
@@ -35,3 +24,9 @@ class App extends Component {
 }
 
 export default App;
+
+/*
+            playVideo={playVideo}
+            pauseVideo={pauseVideo}
+            stopVideo={stopVideo}
+            */

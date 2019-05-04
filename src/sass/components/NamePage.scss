@@ -14,7 +14,21 @@
   z-index: 1;
 
   cursor: pointer;
-
+  .arrow {
+    text-align: center;
+    font-size: 3rem;
+    width: 3rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+    color: #c18284;
+    animation-name: move-arrow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
   .title {
     font-size: 5rem;
     align-self: center;
@@ -61,5 +75,16 @@
     transform: scale(1);
     opacity: 1;
     background-position: -15rem -15rem;
+  }
+}
+@keyframes move-arrow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }

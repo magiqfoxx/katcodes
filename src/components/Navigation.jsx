@@ -6,18 +6,17 @@ const Navigation = () => {
       <div className="moon navigation">
         <ul>
           <li>
-            <a href="#section--about-me">Portfolio</a>
+            <a href="#section--portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#section--portfolio">About me</a>
+            <a href="#section--tech">About me</a>
           </li>
 
           <li>
-            <a href="#section--portfolio">Contact</a>
+            <a href="mailto:katarzyna.zemsta@vp.pl">Contact</a>
           </li>
         </ul>
       </div>
-      
     </React.Fragment>
   );
 };

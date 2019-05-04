@@ -12,6 +12,7 @@
     "react-youtube": "^7.9.0",
     "tar": "^4.4.8"
   },
+  "homepage": "http://katcodes.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
