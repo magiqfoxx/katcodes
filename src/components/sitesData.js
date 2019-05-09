@@ -17,12 +17,12 @@ export const sitesData = [
     github: "https://github.com/magiqfoxx/dog-adoption-center"
   },
   {
-    name: "Games",
-    src: "../img/html/games.png",
-    description: "Play one of the classic games",
-    spec: "react with redux",
-    link: "http://katcodes.com/games",
-    github: "https://github.com/magiqfoxx/Games-App"
+    name: "Humblebrag",
+    src: "../img/html/humblebrag.png",
+    description: "Let us show you the way",
+    spec: "HTML and CSS",
+    link: "https://magiqfoxx.github.io/Humblebrag/",
+    github: "https://github.com/magiqfoxx/Humblebrag"
   },
   {
     name: "Doggopedia",
@@ -57,5 +57,13 @@ export const sitesData = [
     spec: "react with firebase",
     link: "http://katcodes.com/av-club",
     github: "https://github.com/magiqfoxx/av-club"
-  }
+  },
+    {
+    name: "Games",
+    src: "../img/html/games.png",
+    description: "Play one of the classic games",
+    spec: "react with redux",
+    link: "http://katcodes.com/games",
+    github: "https://github.com/magiqfoxx/Games-App"
+  },
   */

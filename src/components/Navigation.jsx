@@ -13,7 +13,7 @@ const Navigation = () => {
           </li>
 
           <li>
-            <a href="mailto:katarzyna.zemsta@vp.pl">Contact</a>
+            <a href="mailto:kat@katcodes.com">Contact</a>
           </li>
         </ul>
       </div>

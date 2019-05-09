@@ -14,7 +14,7 @@ const Technologies = () => {
           />
           <img src="../img/tech/redux.png" alt="tedux" />
           <img src="../img/tech/sass.png" alt="sass" />
-          <img src="../img/tech/git.png" alt="git" />
+          <img src="../img/tech/python.png" alt="git" />
         </div>
       </div>
       <div className="tech">
@@ -22,7 +22,7 @@ const Technologies = () => {
         <div className="tech--items">
           <img src="../img/tech/nodejs.png" alt="nodejs" />
           <img src="../img/tech/mongo.png" alt="mongodb" />
-          <img src="../img/tech/python.png" alt="python" />
+          <img src="../img/tech/pandas.png" alt="python" />
           <img src="../img/tech/django.png" alt="django" />
         </div>
       </div>

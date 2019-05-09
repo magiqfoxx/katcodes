@@ -31,4 +31,5 @@ yarn-error.log*
 /public/img/html/old
 
 /public/img/other
+/public/img/tech/svg
 /src/img/other

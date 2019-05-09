@@ -25,3 +25,6 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+*:focus {
+  border: 2px solid grey;
+}

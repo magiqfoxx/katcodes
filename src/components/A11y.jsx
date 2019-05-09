@@ -1,7 +1,6 @@
 import React from "react";
 
 import NamePage from "./NamePage";
-import MusicPlayer from "./MusicPlayer";
 import Navigation from "./Navigation";
 import AboutMe from "./AboutMe";
 import PortfolioList from "./PortfolioList";

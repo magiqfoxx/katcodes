@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import MusicPlayer from "./MusicPlayer";
 import Navigation from "./Navigation";
 import NavUp from "./NavUp";
 import AboutMe from "./AboutMe";
@@ -24,7 +23,6 @@ class Moon extends Component {
           <button onClick={() => this.changeTheme()} className="change-theme">
             A11y
           </button>
-          <MusicPlayer />
           <Navigation />
           <NavUp />
           <h1 className="moon">Katcodes</h1>

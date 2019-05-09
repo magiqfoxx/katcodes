@@ -26,7 +26,7 @@ class Portfolio extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="portfolio-carousel">
+        <section id="section--portfolio" className="portfolio-carousel">
           <div
             className="portfolio-carousel--arrow__back"
             onClick={this.previousSite}
@@ -48,6 +48,8 @@ class Portfolio extends Component {
             name={sitesData[this.state.currentSite].name}
             src={sitesData[this.state.currentSite].src}
             description={sitesData[this.state.currentSite].description}
+            link={sitesData[this.state.currentSite].link}
+            github={sitesData[this.state.currentSite].github}
             spec={sitesData[this.state.currentSite].spec}
           />
           <div
@@ -67,7 +69,7 @@ class Portfolio extends Component {
               </g>
             </svg>
           </div>
-        </div>
+        </section>
       </React.Fragment>
     );
   }

@@ -3,8 +3,10 @@ import React, { Component } from "react";
 import Moon from "./components/Moon";
 import A11y from "./components/A11y";
 
+import MusicPlayer from "./components/MusicPlayer";
+
 class App extends Component {
-  state = { theme: "moon" };
+  state = { theme: "a11y" };
 
   themeChange(theme) {
     this.setState({ theme });
@@ -19,7 +21,13 @@ class App extends Component {
   };
 
   render() {
-    return this.renderContent();
+    return (
+      <React.Fragment>
+        {/*has to be mounted at the top to work */}
+        <MusicPlayer />
+        {this.renderContent()}
+      </React.Fragment>
+    );
   }
 }
 

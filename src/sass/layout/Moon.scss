@@ -4,9 +4,9 @@
   }
   .change-theme {
     position: absolute;
-    top: calc(50% - 4rem);
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 1rem;
+    top: calc(50px);
+    z-index: 2;
     margin: 1rem;
     width: 5rem;
     height: 2rem;
