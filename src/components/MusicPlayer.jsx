@@ -13,7 +13,7 @@ class MusicPlayer extends Component {
         <div className="moon video">
           <div id="player" />
         </div>
-        <div className="moon music-player">
+        <div className="music-player">
           <div
             className="music-player--button music-player--button__play"
             onClick={playVideo}

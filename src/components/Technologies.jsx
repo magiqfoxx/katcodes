@@ -5,25 +5,61 @@ const Technologies = () => {
   return (
     <section className="moon section--tech" id="section--tech">
       <div className="tech">
-        <h2>What I've worked with</h2>
+        <h2>What I like working with</h2>
         <div className="tech--items">
-          <img
-            onClick={() => showTech("react")}
-            src="../img/tech/react.png"
-            alt="react"
-          />
-          <img src="../img/tech/redux.png" alt="tedux" />
-          <img src="../img/tech/sass.png" alt="sass" />
-          <img src="../img/tech/python.png" alt="git" />
+          <button
+            className="button"
+            onClick={() =>
+              window.open(`http://katcodes.com/city-break`, "_blank")
+            }
+          >
+            <img
+              onClick={() => showTech("react")}
+              src="../img/tech/react.svg"
+              alt="react"
+            />
+          </button>
+          <button
+            className="button"
+            onClick={() => window.open(`http://katcodes.com/games`, "_blank")}
+          >
+            <img src="../img/tech/redux.svg" alt="tedux" />
+          </button>
+          <button
+            className="button"
+            onClick={() =>
+              window.open(`https://petshare-308d3.firebaseapp.com/`, "_blank")
+            }
+          >
+            <img src="../img/tech/sass.svg" alt="sass" />
+          </button>
+          <button
+            className="button"
+            onClick={() =>
+              window.open(`https://petshare-308d3.firebaseapp.com/`, "_blank")
+            }
+          >
+            <img src="../img/tech/firebase.svg" alt="firebase" />
+          </button>
+          <button
+            className="button"
+            onClick={() => window.open(`http://68.183.213.253`, "_blank")}
+          >
+            <img src="../img/tech/python.svg" alt="python" />
+          </button>
         </div>
       </div>
+
       <div className="tech">
         <h2>What I want to learn</h2>
         <div className="tech--items">
-          <img src="../img/tech/nodejs.png" alt="nodejs" />
-          <img src="../img/tech/mongo.png" alt="mongodb" />
-          <img src="../img/tech/pandas.png" alt="python" />
-          <img src="../img/tech/django.png" alt="django" />
+          <img className="toLearn" src="../img/tech/node.svg" alt="nodejs" />
+          <img
+            className="toLearn"
+            src="../img/tech/mongodb.svg"
+            alt="mongodb"
+          />
+          <img className="toLearn" src="../img/tech/django.svg" alt="django" />
         </div>
       </div>
     </section>
