@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe";
 import PortfolioList from "./PortfolioList";
 import Contact from "./Contact";
 import Technologies from "./Technologies";
+import Footer from "../Footer";
 
 const A11y = props => {
   function changeTheme() {
@@ -30,6 +31,7 @@ const A11y = props => {
       </section>
       <PortfolioList />
       <Technologies />
+      <Footer />
     </div>
   );
 };

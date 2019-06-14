@@ -23,6 +23,7 @@
     left: 0;
     width: 2rem;
     height: 2rem;
+
     :hover {
       path {
         fill: $dark--red__color;
@@ -34,6 +35,7 @@
       stroke-width: 5px;
       stroke-linecap: round;
       stroke-linejoin: round;
+      cursor: pointer;
     }
   }
 }

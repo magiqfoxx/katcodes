@@ -1,5 +1,15 @@
 export const sitesData = [
   {
+    name: "PetShare",
+    src: "../img/html/petshare.png",
+    description:
+      "Share your pets with other animal enthusiasts!(WORK IN PROGRESS)",
+    spec:
+      "React (ContextAPI, Hooks, Portals), Firebase (authentication, firestore, storage, cloud functions)",
+    link: "https://petshare-308d3.firebaseapp.com/",
+    github: "https://github.com/magiqfoxx/petshare"
+  },
+  {
     name: "Trig Periapt",
     src: "../img/html/trig-periapt.png",
     description: "Get your weekly serving of the best potions on the market",
@@ -8,45 +18,37 @@ export const sitesData = [
     github: "https://github.com/magiqfoxx/trig-periapt"
   },
   {
-    name: "Dog Adoption Center",
-    src: "../img/html/dog-center.png",
-    description:
-      "Our dogs are looking for a forever home and you just might be it",
-    spec: "React, React-Router, HTML and CSS",
-    link: "http://katcodes.com/dog-center",
-    github: "https://github.com/magiqfoxx/dog-adoption-center"
-  },
-  {
-    name: "Humblebrag",
-    src: "../img/html/humblebrag.png",
-    description: "Let us show you the way",
-    spec: "HTML and CSS",
-    link: "https://magiqfoxx.github.io/Humblebrag/",
-    github: "https://github.com/magiqfoxx/Humblebrag"
+    name: "Games",
+    src: "../img/html/games.png",
+    description: "Play one of the classic games",
+    spec: "React with Redux + Sass and React-Router)",
+    link: "http://katcodes.com/games",
+    github: "https://github.com/magiqfoxx/Games-App"
   },
   {
     name: "Doggopedia",
     src: "../img/html/doggopedia.png",
-    description: "Learn more about dog breeds",
-    spec: "react with wikipedia api",
+    description: "Learn about dog breeds and test your knowledge",
+    spec: "React with Wikipedia API (with React-Router)",
     link: "http://katcodes.com/doggopedia",
     github: "https://github.com/magiqfoxx/doggopedia"
   },
   {
     name: "City Break",
     src: "../img/html/citybreak.png",
-    description: "Get some info about the place you want to go to",
-    spec: "react with different apis",
+    description: "Get basic information on the place you want to go to",
+    spec: "React with different APIs (with React-Router)",
     link: "http://katcodes.com/city-break",
     github: "https://github.com/magiqfoxx/city-break"
   },
   {
-    name: "The Walk",
-    src: "../img/html/walk.png",
-    description: "Dog-walking service",
-    spec: "HTML and CSS only",
-    link: "https://magiqfoxx.github.io/the-walk/",
-    github: "https://github.com/magiqfoxx/the-walk"
+    name: "Dog Adoption Center",
+    src: "../img/html/dog-center.png",
+    description:
+      "Our dogs are looking for a forever home and you just might be it",
+    spec: "React, React-Router",
+    link: "http://katcodes.com/dog-center",
+    github: "https://github.com/magiqfoxx/dog-adoption-center"
   }
 ];
 /*
@@ -58,12 +60,22 @@ export const sitesData = [
     link: "http://katcodes.com/av-club",
     github: "https://github.com/magiqfoxx/av-club"
   },
-    {
-    name: "Games",
-    src: "../img/html/games.png",
-    description: "Play one of the classic games",
-    spec: "react with redux",
-    link: "http://katcodes.com/games",
-    github: "https://github.com/magiqfoxx/Games-App"
+    
+   {
+    name: "The Walk",
+    src: "../img/html/walk.png",
+    description: "Dog-walking service",
+    spec: "HTML and CSS only",
+    link: "https://magiqfoxx.github.io/the-walk/",
+    github: "https://github.com/magiqfoxx/the-walk"
   },
+  ,
+  {
+    name: "Humblebrag",
+    src: "../img/html/humblebrag.png",
+    description: "Let us show you the way",
+    spec: "HTML and CSS",
+    link: "https://magiqfoxx.github.io/Humblebrag/",
+    github: "https://github.com/magiqfoxx/Humblebrag"
+  }
   */
