@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import AboutMe from "./AboutMe";
 import PortfolioList from "./PortfolioList";
 import Contact from "./Contact";
+import CurrentlyWorkingOn from "./CurrentlyWorkingOn";
 import Technologies from "./Technologies";
 import Footer from "../Footer";
 
@@ -30,6 +31,7 @@ const A11y = props => {
         </main>
       </section>
       <PortfolioList />
+      <CurrentlyWorkingOn />
       <Technologies />
       <Footer />
     </div>

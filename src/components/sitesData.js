@@ -2,6 +2,7 @@ export const sitesData = [
   {
     name: "PetShare",
     src: "../img/html/petshare.png",
+    gif: "../img/html/petshare.gif",
     description:
       "Share your pets with other animal enthusiasts!(WORK IN PROGRESS)",
     spec:
@@ -12,6 +13,7 @@ export const sitesData = [
   {
     name: "Trig Periapt",
     src: "../img/html/trig-periapt.png",
+    gif: "../img/html/trig-periapt.gif",
     description: "Get your weekly serving of the best potions on the market",
     spec: "HTML and CSS only",
     link: "https://magiqfoxx.github.io/trig-periapt/",
@@ -20,6 +22,7 @@ export const sitesData = [
   {
     name: "Games",
     src: "../img/html/games.png",
+    gif: "../img/html/games.gif",
     description: "Play one of the classic games",
     spec: "React with Redux + Sass and React-Router)",
     link: "http://katcodes.com/games",
@@ -28,6 +31,7 @@ export const sitesData = [
   {
     name: "Doggopedia",
     src: "../img/html/doggopedia.png",
+    gif: "../img/html/doggopedia.gif",
     description: "Learn about dog breeds and test your knowledge",
     spec: "React with Wikipedia API (with React-Router)",
     link: "http://katcodes.com/doggopedia",
@@ -36,6 +40,7 @@ export const sitesData = [
   {
     name: "City Break",
     src: "../img/html/citybreak.png",
+    gif: "../img/html/citybreak.gif",
     description: "Get basic information on the place you want to go to",
     spec: "React with different APIs (with React-Router)",
     link: "http://katcodes.com/city-break",
@@ -44,6 +49,7 @@ export const sitesData = [
   {
     name: "Dog Adoption Center",
     src: "../img/html/dog-center.png",
+    gif: "../img/html/dog-center.gif",
     description:
       "Our dogs are looking for a forever home and you just might be it",
     spec: "React, React-Router",

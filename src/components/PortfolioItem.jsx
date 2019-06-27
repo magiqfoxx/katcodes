@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 const PortfolioItem = props => {
+  const [image, setImage] = useState(props.src);
+
   return (
-    <div className="portfolio-item">
+    <div
+      className="portfolio-item"
+      onMouseEnter={() => setImage(props.gif)}
+      onMouseLeave={() => {
+        setImage(props.src);
+      }}
+    >
       <figure>
         <img
           onClick={() => window.open(`${props.link}`, "_blank")}
-          src={props.src}
+          src={image}
           alt={props.name}
         />
       </figure>

@@ -101,14 +101,13 @@
       min-width: 300px;
       max-width: 80vw;
       width: 40vw;
-      border-top: 1px solid var(--primary-color);
-      border-left: 1px solid var(--primary-color);
-      box-shadow: 2px 2px 4px 0px var(--primary-color);
+      border: 1px solid var(--primary-color);
+      box-shadow: -4px 3px var(--primary-color);
       color: #827774;
       figure {
         img {
           min-width: 300px;
-          max-width: 80vw;
+          max-width: 100%;
           width: 40vw;
           cursor: pointer;
         }

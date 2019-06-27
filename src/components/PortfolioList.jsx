@@ -14,6 +14,7 @@ const PortfolioList = () => {
             <PortfolioItem
               name={site.name}
               src={site.src}
+              gif={site.gif}
               description={site.description}
               spec={site.spec}
               link={site.link}

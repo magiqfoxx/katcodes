@@ -104,6 +104,28 @@
       margin: 2rem;
     }
   }
+  #section--working-on {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      padding: 2rem;
+    }
+    h4 {
+      margin: 1rem;
+    }
+    .description {
+      margin: 1rem;
+      text-align: left;
+    }
+    .concept-images {
+      &--img {
+        margin: 1rem;
+      }
+    }
+  }
   #section--tech {
     padding: 2rem;
     text-align: center;

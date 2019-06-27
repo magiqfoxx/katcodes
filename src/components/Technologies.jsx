@@ -8,7 +8,7 @@ const Technologies = () => {
         <h2>What I like working with</h2>
         <div className="tech--items">
           <button
-            className="button"
+            className="button tech--items--item"
             onClick={() =>
               window.open(`http://katcodes.com/city-break`, "_blank")
             }
@@ -20,13 +20,13 @@ const Technologies = () => {
             />
           </button>
           <button
-            className="button"
+            className="button tech--items--item"
             onClick={() => window.open(`http://katcodes.com/games`, "_blank")}
           >
             <img src="../img/tech/redux.svg" alt="tedux" />
           </button>
           <button
-            className="button"
+            className="button tech--items--item"
             onClick={() =>
               window.open(`https://petshare-308d3.firebaseapp.com/`, "_blank")
             }
@@ -34,7 +34,7 @@ const Technologies = () => {
             <img src="../img/tech/sass.svg" alt="sass" />
           </button>
           <button
-            className="button"
+            className="button tech--items--item"
             onClick={() =>
               window.open(`https://petshare-308d3.firebaseapp.com/`, "_blank")
             }
@@ -42,7 +42,7 @@ const Technologies = () => {
             <img src="../img/tech/firebase.svg" alt="firebase" />
           </button>
           <button
-            className="button"
+            className="button tech--items--item"
             onClick={() => window.open(`http://68.183.213.253`, "_blank")}
           >
             <img src="../img/tech/python.svg" alt="python" />
@@ -53,13 +53,21 @@ const Technologies = () => {
       <div className="tech">
         <h2>What I want to learn</h2>
         <div className="tech--items">
-          <img className="toLearn" src="../img/tech/node.svg" alt="nodejs" />
           <img
-            className="toLearn"
+            className="toLearn tech--items--item"
+            src="../img/tech/node.svg"
+            alt="nodejs"
+          />
+          <img
+            className="toLearn tech--items--item"
             src="../img/tech/mongodb.svg"
             alt="mongodb"
           />
-          <img className="toLearn" src="../img/tech/django.svg" alt="django" />
+          <img
+            className="toLearn tech--items--item"
+            src="../img/tech/django.svg"
+            alt="django"
+          />
         </div>
       </div>
     </section>
